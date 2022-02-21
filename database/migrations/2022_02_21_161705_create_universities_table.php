@@ -15,6 +15,11 @@ class CreateUniversitiesTable extends Migration
     {
         Schema::create('universities', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('display_name');
+            $table->string('address');
+            $table->decimal('latitude', 11, 7)->nullable();
+            $table->decimal('longitude', 11, 7)->nullable();
             $table->timestamps();
         });
     }
